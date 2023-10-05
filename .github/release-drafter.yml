@@ -12,6 +12,18 @@ categories:
   - title: '🧰 Maintenance'
     label: 'chore'
 
+autolabeler:
+  - label: 'feature'
+    branch:
+      - '/feature\/.+/'
+  - label: 'bug'
+    branch:
+      - '/bug\/.+/'
+  - label: 'chore'
+    branch:
+      - '/chore\/.+/'
+      - '*'
+
 template: |
   ## Whats Changed
 
