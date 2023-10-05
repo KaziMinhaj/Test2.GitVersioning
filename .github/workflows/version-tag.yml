@@ -1,4 +1,4 @@
-name: build and version
+name: Version and Tag
 
 on:
   push:
@@ -29,9 +29,7 @@ jobs:
           configFilePath: .github/gitversion.yml
       - name: Display Version
         run: echo "Generated Version ${{ steps.gitversion.outputs.FullSemVer }}"
-      - name: Restore dependencies
-        run: dotnet restore
-      - name: Build
-        run: dotnet build --no-restore
-      - name: Test
-        run: dotnet test --no-build --verbosity normal
+      - name: Tag master branch
+        run: git tag ${{steps.gitversion.outputs.MajorMinorPatch}}
+      - name: Push tag
+        run: git push --tags
