@@ -9,7 +9,7 @@ branches:
     regex: ^master$|^main$
     increment: patch
     is-mainline: true
-    mode: Mainline
+    mode: ContinuousDeployment
 
   feature:
     regex: ^feature?[/-]
