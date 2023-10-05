@@ -9,6 +9,7 @@ branches:
     regex: ^master$|^main$
     increment: patch
     is-mainline: true
+    mode: Mainline
 
   feature:
     regex: ^feature?[/-]
