@@ -9,3 +9,9 @@ branches:
     regex: ^master$|^main$
     increment: patch
     is-mainline: true
+
+  feature:
+    regex: ^feature?[/-]
+    mode: ContinuousDelivery
+    tag: useBranchName
+    increment: Minor
