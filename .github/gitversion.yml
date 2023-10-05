@@ -1,4 +1,11 @@
+mode: Mainline
 major-version-bump-message: '\+major'
 minor-version-bump-message: '\+minor'
 patch-version-bump-message: '\+patch'
 no-bump-message: '\+skip'
+branches:
+  main:
+    tag: ''
+    regex: ^master$|^main$
+    increment: patch
+    is-mainline: true
